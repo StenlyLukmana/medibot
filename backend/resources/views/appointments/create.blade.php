@@ -5,8 +5,8 @@
     <h2>Book Appointment at {{ $facility->name }}</h2>
 
     <form action="{{ route('appointments.createWithFacility', $facility->id) }}" method="GET" class="mb-4">
-        <label for="department_id" class="form-label">Lihat dokter dalam departemen:</label>
-        <select name="department_id" id="department_id" class="form-select" onchange="this.form.submit()">
+        <label for="departmentID" class="form-label">Lihat dokter dalam departemen:</label>
+        <select name="departmentID" id="departmentID" class="form-select" onchange="this.form.submit()">
             <option value="">Semua Departemen</option>
             @foreach($departments as $department)
                 <option value="{{ $department->department->id }}" {{ $selectedDepartment == $department->department->id ? 'selected' : '' }}>

@@ -38,19 +38,6 @@ class AppointmentController extends Controller
         ]);
     }
 
-    # Delete
-    // public function destroy(Appointment $appointment)
-    // {
-    //     if ($appointment->userID !== Auth::id()) {
-    //         abort(403);
-    //     }
-
-    //     $appointment->delete();
-
-    //     return redirect()->route('appointments.index')->with('success', 'Appointment canceled.');
-    // }
-
-    # Create, flow 1: Facility -> Department, Doctor, Reward, Reason, Confirm (All in the same page, so if a department is chosen it filters for doctors available in the department) -> Store
     public function createWithFacility($facility_id)
     {
         $user = auth()->user();
