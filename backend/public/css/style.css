@@ -1,0 +1,162 @@
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #F7F7F5;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #B2BEB5;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-link {
+    font-size: 20px;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+
+/* Facility Card Styles */
+.facility-container {
+    margin: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.facility-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.facility-card {
+    width: 25rem;
+    height: 14rem;
+    border-radius: 12px;
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.facility-card-content {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5%;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem 1.5rem;
+}
+
+.facility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* .facility-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    padding: 1rem 1.5rem;
+} */
+
+.facility-name, .facility-contact, .facility-info {
+    text-align: left;
+}
+
+.facility-name {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.facility-contact {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.facility-info {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.facility-info span {
+    display: block;
+    margin-top: 0.15rem;
+    font-size: 18px;
+}
+
+.submit-button {
+    color: #333;
+    background-color: #B2BEB5;
+    border-color: #B2BEB5;
+}
+
+
+/* Appointment Card Styles */
+.appointments-container {
+    margin: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.appointment-card {
+    width: 40rem;
+    height: 14rem;
+    border-radius: 12px;
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.appointment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.appointment-card-content {
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: left;
+    width: 100%;
+}
+
+.appointment-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.appointment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    color: #555;
+    font-size: 0.95rem;
+}
