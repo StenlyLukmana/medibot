@@ -1,11 +1,15 @@
 # 🏥 Medibot
 > A healthcare platform that simplifies the booking process of medical appointments.
 
+```quote
+“Technology should empower accessibility — Medibot aims to make healthcare more approachable for everyone.”
+```
+
 
 ---
 
 
-## ⚠️ This project was created as a minimum working prototype for educational & portfolio purposes
+## ⚠️ Project was created as a minimum working prototype for educational & portfolio purposes
 
 
 ---
@@ -19,9 +23,6 @@ Up next:
 - Patient history tracking
 - Add admin features
 
-```quote
-“Technology should empower accessibility — Medibot aims to make healthcare more approachable for everyone.”
-```
 
 ---
 
