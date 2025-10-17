@@ -1,6 +1,24 @@
 # 🏥 Medibot
 > A healthcare platform that simplifies the booking process of medical appointments.
 
+
+---
+
+
+## ⚠️ This project was created as a minimum working prototype for educational & portfolio purposes
+
+
+---
+
+
+## 🏗️ Still under construction
+Up next:
+- Real-time availability calendar for doctors
+- Structure redesign into RESTful API
+- UI redesign
+- Patient history tracking
+- Add admin features
+
 ```quote
 “Technology should empower accessibility — Medibot aims to make healthcare more approachable for everyone.”
 ```
@@ -40,43 +58,6 @@ Built with **Laravel 12**, **Livewire**, and **Volt**, it empowers users to brow
 | **Database** | MySQL |
 | **Mail Service** | Mailtrap SMTP Sandbox |
 | **Version Control** | Git + GitHub |
-
-
----
-
-
-## 🗂️ Project Structure (Relevant Files)
-
-Medibot/
-│
-├── app/
-│ ├── Http/Controllers/
-│ │ └── AppointmentController.php
-│ ├── Models/
-│ │ ├── Appointment.php
-│ │ ├── Doctor.php
-│ │ ├── HealthFacility.php
-│ │ ├── Department.php
-│ │ └── Reward.php
-│
-├── resources/views/
-│ ├── appointments/
-│ │ ├── index.blade.php
-│ │ └── create.blade.php
-│ ├── health_facilities/
-│ │ └── index.blade.php
-│ ├── emails/
-│ │ └── appointment-confirmation.blade.php
-│ └── components/
-│ └── layouts/
-│ ├── main.blade.php
-│ └── navbar.blade.php
-│
-├── routes/web.php
-├── database/seeders/
-├── .env
-├── composer.json
-└── README.md
 
 
 ---
