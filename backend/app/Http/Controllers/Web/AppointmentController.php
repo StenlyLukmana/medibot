@@ -48,7 +48,7 @@ class AppointmentController extends Controller
             ->where('healthFacilityID', $facility_id)
             ->get();
         
-        $selectedDepartment = request('department_id');
+        $selectedDepartment = request('departmentID');
 
         $doctorsQuery = Doctor::whereHas('healthFacilityDepartments', function ($query) use ($facility_id, $selectedDepartment) {
             $query->where('healthFacilityID', $facility_id);
