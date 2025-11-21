@@ -19,27 +19,27 @@ class HealthFacility extends Model
         'email',
         'password',
         'address',
-        'contactNumber',
-        'healthFacilityTypeID',
+        'contact_number',
+        'health_facility_type_id',
     ];
 
     public function type()
     {
-        return $this->belongsTo(HealthFacilityType::class, 'healthFacilityTypeID');
+        return $this->belongsTo(HealthFacilityType::class, 'health_facility_type_id');
     }
 
     public function facilityDepartments()
     {
-        return $this->hasMany(HealthFacilityDepartment::class, 'healthFacilityID');
+        return $this->hasMany(HealthFacilityDepartment::class, 'health_facility_id');
     }
 
     public function doctors()
     {
-        return $this->hasMany(Doctor::class, 'healthFacilityID');
+        return $this->hasMany(Doctor::class, 'health_facility_id');
     }
 
     public function appointments()
     {
-        return $this->hasMany(Appointment::class, 'healthFacilityID');
+        return $this->hasMany(Appointment::class, 'health_facility_id');
     }
 }

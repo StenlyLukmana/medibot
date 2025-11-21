@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('name');
             $table->string('contact')->nullable();
-            $table->time('availableFrom')->nullable();
-            $table->time('availableUntil')->nullable();
+            $table->time('available_from')->nullable();
+            $table->time('available_until')->nullable();
 
-            $table->foreignId('healthFacilityID')->constrained('health_facilities')->onDelete('cascade');
-            $table->foreignId('healthFacilityDepartmentID')->constrained('health_facility_departments')->onDelete('cascade');
+            $table->foreignId('health_facility_id')->constrained()->onDelete('cascade');
+            $table->foreignId('health_facility_department_id')->constrained()->onDelete('cascade');
             
             $table->timestamps();
         });

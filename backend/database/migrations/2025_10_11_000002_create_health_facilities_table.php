@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('address');
-            $table->string('contactNumber')->nullable();
+            $table->string('contact_number')->nullable();
 
-            $table->foreignId('healthFacilityTypeID')->constrained('health_facility_types')->onDelete('cascade');
+            $table->foreignId('health_facility_type_id')->constrained()->onDelete('cascade');
             
             $table->timestamps();
         });

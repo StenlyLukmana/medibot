@@ -17,7 +17,7 @@ class Department extends Model
     ];
 
     public function facilityDepartments() {
-        return $this->hasMany(HealthFacilityDepartment::class, 'departmentID');
+        return $this->hasMany(HealthFacilityDepartment::class, 'department_id');
     }
 
 }

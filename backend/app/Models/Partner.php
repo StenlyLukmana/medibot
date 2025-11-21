@@ -18,6 +18,6 @@ class Partner extends Model
 
     public function rewards()
     {
-        return $this->hasMany(Reward::class, 'partnerID');
+        return $this->hasMany(Reward::class, 'partner_id');
     }
 }

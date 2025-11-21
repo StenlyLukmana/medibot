@@ -14,14 +14,16 @@ return new class extends Migration
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
 
-            $table->dateTime('dateTime');
+            $table->date('date');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->text('reason')->nullable();
 
-            $table->foreignId('userID')->constrained('users')->onDelete('cascade');
-            $table->foreignId('doctorID')->constrained('doctors')->onDelete('cascade');
-            $table->foreignId('appointmentStatusID')->constrained('appointment_statuses')->onDelete('cascade');
-            $table->foreignId('rewardID')->nullable()->constrained('rewards')->onDelete('set null');
-            $table->foreignId('healthFacilityID')->constrained('health_facilities')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('doctor_id')->constrained()->onDelete('cascade');
+            $table->foreignId('appointment_status_id')->constrained()->onDelete('cascade');
+            $table->foreignId('reward_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('health_facility_id')->constrained()->onDelete('cascade');
             
             $table->timestamps();
         });

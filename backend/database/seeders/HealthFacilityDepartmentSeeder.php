@@ -23,13 +23,11 @@ class HealthFacilityDepartmentSeeder extends Seeder
             'Umum',
             'Anak',
             'Kandungan',
-            'Kulit dan Kelamin',
             'Telinga Hidung Tenggorokan (THT)',
             'Gigi',
             'Mata',
             'Jantung',
             'Saraf',
-            'Jiwa',
             'Radiologi',
             'Laboratorium',
             'Farmasi',
@@ -49,15 +47,15 @@ class HealthFacilityDepartmentSeeder extends Seeder
 
         foreach ($hospitalDepartments as $dept) {
             HealthFacilityDepartment::create([
-                'departmentID' => $dept->id,
-                'healthFacilityID' => $hospital->id,
+                'department_id' => $dept->id,
+                'health_facility_id' => $hospital->id,
             ]);
         }
 
         foreach ($puskesmasDepartments as $dept) {
             HealthFacilityDepartment::create([
-                'departmentID' => $dept->id,
-                'healthFacilityID' => $puskesmas->id,
+                'department_id' => $dept->id,
+                'health_facility_id' => $puskesmas->id,
             ]);
         }
     }

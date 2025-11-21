@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('health_facility_departments', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('healthFacilityID')->constrained('health_facilities')->onDelete('cascade');
-            $table->foreignId('departmentID')->constrained('departments')->onDelete('cascade');
+            $table->foreignId('health_facility_id')->constrained()->onDelete('cascade');
+            $table->foreignId('department_id')->constrained()->onDelete('cascade');
 
             $table->timestamps();
         });

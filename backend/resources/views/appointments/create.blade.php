@@ -30,7 +30,26 @@
                         <input type="hidden" name="doctorID" value="{{ $doctor->id }}">
                         <input type="hidden" name="healthFacilityID" value="{{ $facility->id }}">
                         <div class="mb-2">
-                            <input type="datetime-local" name="dateTime" class="form-control" required>
+                            <label for="date" class="form-label">Tanggal Pemeriksaan</label>
+                            <input type="date" name="date" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="timeSlot" class="form-label">Pilih Waktu</label>
+                            <select name="timeSlot" class="form-select" required>
+                                <option value="">Pilih Waktu</option>
+                                @php
+                                    $slots = [
+                                        '08:00-10:00',
+                                        '10:00-12:00',
+                                        '12:00-14:00',
+                                        '14:00-16:00',
+                                    ];
+                                @endphp
+
+                                @foreach ($slots as $slot)
+                                    <option value="{{ $slot }}">{{ $slot }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="mb-2">
                             <select name="rewardID" class="form-select">

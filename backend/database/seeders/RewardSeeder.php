@@ -21,14 +21,14 @@ class RewardSeeder extends Seeder
             [
                 'name' => 'Voucher Diskon Tommorow Kovee',
                 'discount' => 10000,
-                'expiryDate' => now()->addMonths(3),
-                'partnerID' => $tommorrowKovee->id,
+                'expiry_date' => now()->addMonths(3),
+                'partner_id' => $tommorrowKovee->id,
             ],
             [
                 'name' => 'Voucher Diskon CrabFood',
                 'discount' => 15000,
-                'expiryDate' => now()->addMonths(2),
-                'partnerID' => $crabFood->id,
+                'expiry_date' => now()->addMonths(2),
+                'partner_id' => $crabFood->id,
             ],
         ]);
     }

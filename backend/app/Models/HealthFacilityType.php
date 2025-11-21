@@ -17,6 +17,6 @@ class HealthFacilityType extends Model
 
     public function healthFacilities()
     {
-        return $this->hasMany(HealthFacility::class, 'healthFacilityTypeID');
+        return $this->hasMany(HealthFacility::class, 'health_facility_type_id');
     }
 }

@@ -23,16 +23,16 @@ class HealthFacilitySeeder extends Seeder
                 'email' => 'info@rsnorthblue.com',
                 'password' => bcrypt('password'),
                 'address' => 'Jl. North Blue',
-                'contactNumber' => '081234567890',
-                'healthFacilityTypeID' => $hospital,
+                'contact_number' => '081234567890',
+                'health_facility_type_id' => $hospital,
             ],
             [
                 'name' => 'Puskesmas Drum Island',
                 'email' => 'puskesmas@drumisland.go.id',
                 'password' => bcrypt('password'),
                 'address' => 'Jl. Drum Island',
-                'contactNumber' => '0812345679',
-                'healthFacilityTypeID' => $puskesmas,
+                'contact_number' => '0812345679',
+                'health_facility_type_id' => $puskesmas,
             ],
         ]);
     }

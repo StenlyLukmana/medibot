@@ -13,7 +13,8 @@
                         <span><strong>Fasilitas Kesehatan:</strong> {{ $appointment->healthFacility->name }}</span>
                         <span><strong>Alasan:</strong> {{ $appointment->reason }}</span>
                         <span><strong>Status:</strong> {{ $appointment->appointmentStatus->name }}</span>
-                        <span><strong>Tanggal:</strong> {{ \Carbon\Carbon::parse($appointment->dateTime)->format('d M Y, H:i') }}</span>
+                        <span><strong>Tanggal:</strong> {{ \Carbon\Carbon::parse($appointment->date)->translatedFormat('d M Y') }}</span>
+                        <span><strong>Waktu:</strong> {{ $appointment->start_time }} - {{ $appointment->end_time }}</span>
                     </div>
                 </div>
             </div>

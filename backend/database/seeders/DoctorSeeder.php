@@ -19,7 +19,7 @@ class DoctorSeeder extends Seeder
     {
         $facility = HealthFacility::where('name', $facilityName)->first();
 
-        $departments = HealthFacilityDepartment::where('healthFacilityID', $facility->id)->get();
+        $departments = HealthFacilityDepartment::where('health_facility_id', $facility->id)->get();
 
         foreach ($departments as $department) {
 
@@ -27,10 +27,10 @@ class DoctorSeeder extends Seeder
                 'email' => 'dr' . strtolower(str_replace(' ', '', $department->department->name)) . $emailDomain,
                 'name' => 'Dr. ' . $department->department->name,
                 'contact' => '0812000' . rand(1000, 9999),
-                'availableFrom' => '08:00:00',
-                'availableUntil' => '16:00:00',
-                'healthFacilityID' => $facility->id,
-                'healthFacilityDepartmentID' => $department->id,
+                'available_from' => '08:00:00',
+                'available_until' => '16:00:00',
+                'health_facility_id' => $facility->id,
+                'health_facility_department_id' => $department->id,
             ]);
         }
     }

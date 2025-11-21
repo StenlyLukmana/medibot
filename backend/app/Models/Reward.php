@@ -15,17 +15,17 @@ class Reward extends Model
     protected $fillable = [
         'name',
         'discount',
-        'expiryDate',
-        'partnerID',
+        'expiry_date',
+        'partner_id',
     ];
 
     public function partner()
     {
-        return $this->belongsTo(Partner::class, 'partnerID');
+        return $this->belongsTo(Partner::class, 'partner_id');
     }
 
     public function appointments()
     {
-        return $this->hasMany(Appointment::class, 'rewardID');
+        return $this->hasMany(Appointment::class, 'reward_id');
     }
 }

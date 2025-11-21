@@ -16,9 +16,9 @@ return new class extends Migration
             
             $table->string('name')->nullable();
             $table->integer('discount')->nullable();
-            $table->date('expiryDate')->nullable();
+            $table->date('expiry_date')->nullable();
 
-            $table->foreignId('partnerID')->constrained('partners')->onDelete('cascade');
+            $table->foreignId('partner_id')->constrained()->onDelete('cascade');
 
             $table->timestamps();
         });

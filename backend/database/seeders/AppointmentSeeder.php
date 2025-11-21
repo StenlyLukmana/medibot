@@ -23,15 +23,19 @@ class AppointmentSeeder extends Seeder
         $reward = Reward::first();
         $appointmentStatusID = AppointmentStatus::where('name', 'Pending')->first();
         $facility = HealthFacility::first();
+        $start = now()->setTime(9, 0);
+        $end   = $start->copy()->addHours(2);
 
         Appointment::create([
-            'dateTime' => now()->addDays(3)->setTime(10, 0),
+            'date' => now()->addDays(3)->toDateString(),
+            'start_time' => $start->format('H:i:s'),
+            'end_time' => $end->format('H:i:s'),
             'reason' => 'Routine checkup',
-            'userID' => $user->id,
-            'doctorID' => $doctor->id,
-            'appointmentStatusID' => $appointmentStatusID->id,
-            'rewardID' => $reward->id,
-            'healthFacilityID' => $facility->id,
+            'user_id' => $user->id,
+            'doctor_id' => $doctor->id,
+            'appointment_status_id' => $appointmentStatusID->id,
+            'reward_id' => $reward->id,
+            'health_facility_id' => $facility->id,
         ]);
     }
 }

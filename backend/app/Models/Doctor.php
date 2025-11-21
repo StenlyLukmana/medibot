@@ -18,14 +18,14 @@ class Doctor extends Model
         'email',
         'name',
         'contact',
-        'availableFrom',
-        'availableUntil',
-        'healthFacilityDepartmentID',
+        'available_from',
+        'available_until',
+        'health_facility_department_id',
     ];
 
     public function healthFacilityDepartments()
     {
-        return $this->belongsTo(HealthFacilityDepartment::class, 'healthFacilityDepartmentID');
+        return $this->belongsTo(HealthFacilityDepartment::class, 'health_facility_department_id');
     }
 
     public function department()
@@ -35,6 +35,6 @@ class Doctor extends Model
 
     public function appointments()
     {
-        return $this->hasMany(Appointment::class, 'doctorID');
+        return $this->hasMany(Appointment::class, 'doctor_id');
     }
 }
